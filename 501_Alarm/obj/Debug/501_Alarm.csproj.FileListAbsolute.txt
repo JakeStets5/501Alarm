@@ -1,0 +1,12 @@
+C:\Users\JakeS\OneDrive\Desktop\501Alarm\501_Alarm\bin\Debug\501_Alarm.exe.config
+C:\Users\JakeS\OneDrive\Desktop\501Alarm\501_Alarm\bin\Debug\501_Alarm.exe
+C:\Users\JakeS\OneDrive\Desktop\501Alarm\501_Alarm\bin\Debug\501_Alarm.pdb
+C:\Users\JakeS\OneDrive\Desktop\501Alarm\501_Alarm\obj\Debug\501_Alarm.csproj.AssemblyReference.cache
+C:\Users\JakeS\OneDrive\Desktop\501Alarm\501_Alarm\obj\Debug\501_Alarm.csproj.SuggestedBindingRedirects.cache
+C:\Users\JakeS\OneDrive\Desktop\501Alarm\501_Alarm\obj\Debug\_501_Alarm.AddEditAlarm.resources
+C:\Users\JakeS\OneDrive\Desktop\501Alarm\501_Alarm\obj\Debug\_501_Alarm.Form1.resources
+C:\Users\JakeS\OneDrive\Desktop\501Alarm\501_Alarm\obj\Debug\_501_Alarm.Properties.Resources.resources
+C:\Users\JakeS\OneDrive\Desktop\501Alarm\501_Alarm\obj\Debug\501_Alarm.csproj.GenerateResource.cache
+C:\Users\JakeS\OneDrive\Desktop\501Alarm\501_Alarm\obj\Debug\501_Alarm.csproj.CoreCompileInputs.cache
+C:\Users\JakeS\OneDrive\Desktop\501Alarm\501_Alarm\obj\Debug\501_Alarm.exe
+C:\Users\JakeS\OneDrive\Desktop\501Alarm\501_Alarm\obj\Debug\501_Alarm.pdb
