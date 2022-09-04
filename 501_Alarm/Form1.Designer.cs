@@ -35,6 +35,7 @@
             this.uxaddButton = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.uxalarmList = new System.Windows.Forms.ListBox();
+            this.uxalarmAlert = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // uxeditButton
@@ -59,6 +60,7 @@
             this.uxsnoozeButton.TabIndex = 1;
             this.uxsnoozeButton.Text = "Snooze";
             this.uxsnoozeButton.UseVisualStyleBackColor = true;
+            this.uxsnoozeButton.Click += new System.EventHandler(this.uxsnoozeButton_Click);
             // 
             // uxstopButton
             // 
@@ -70,6 +72,7 @@
             this.uxstopButton.TabIndex = 2;
             this.uxstopButton.Text = "Stop";
             this.uxstopButton.UseVisualStyleBackColor = true;
+            this.uxstopButton.Click += new System.EventHandler(this.uxstopButton_Click);
             // 
             // uxaddButton
             // 
@@ -94,15 +97,25 @@
             this.uxalarmList.ItemHeight = 16;
             this.uxalarmList.Location = new System.Drawing.Point(34, 84);
             this.uxalarmList.Name = "uxalarmList";
-            this.uxalarmList.Size = new System.Drawing.Size(321, 260);
+            this.uxalarmList.Size = new System.Drawing.Size(321, 196);
             this.uxalarmList.TabIndex = 5;
             this.uxalarmList.SelectedIndexChanged += new System.EventHandler(this.uxalarmList_SelectedIndexChanged);
+            // 
+            // uxalarmAlert
+            // 
+            this.uxalarmAlert.BackColor = System.Drawing.SystemColors.Control;
+            this.uxalarmAlert.Location = new System.Drawing.Point(121, 299);
+            this.uxalarmAlert.Multiline = true;
+            this.uxalarmAlert.Name = "uxalarmAlert";
+            this.uxalarmAlert.Size = new System.Drawing.Size(137, 41);
+            this.uxalarmAlert.TabIndex = 6;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(399, 450);
+            this.Controls.Add(this.uxalarmAlert);
             this.Controls.Add(this.uxalarmList);
             this.Controls.Add(this.uxaddButton);
             this.Controls.Add(this.uxstopButton);
@@ -112,6 +125,7 @@
             this.Text = "Alarm501";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -123,6 +137,7 @@
         private System.Windows.Forms.Button uxaddButton;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ListBox uxalarmList;
+        private System.Windows.Forms.TextBox uxalarmAlert;
     }
 }
 

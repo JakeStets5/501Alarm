@@ -14,10 +14,6 @@ namespace _501_Alarm
     {
         private Form1 MainForm;
 
-        public bool EditCheckEnabled;
-
-        public DateTime EditDateTime;
-
         private bool _alarmStatus;
 
         public AddEditAlarm(Form1 form1, bool checkEnabled, DateTime dateTime)
@@ -25,10 +21,8 @@ namespace _501_Alarm
             InitializeComponent();
             uxtimePicker.Format = DateTimePickerFormat.Time;
             MainForm = form1;   
-            EditCheckEnabled = checkEnabled;
-            EditDateTime = dateTime;
-            uxonCheckBox.Checked = EditCheckEnabled;
-            uxtimePicker.Value = EditDateTime;
+            uxonCheckBox.Checked = checkEnabled;
+            uxtimePicker.Value = dateTime;
         }
 
         /// <summary>
@@ -47,32 +41,25 @@ namespace _501_Alarm
 
         private void uxsetButton_Click(object sender, EventArgs e)
         {
-            uxtimePicker.Format = DateTimePickerFormat.Custom;
+            uxtimePicker.Format = DateTimePickerFormat.Time;
             uxtimePicker.CustomFormat = "hh:mm tt";
             if (MainForm.BeingEdited)
             {
-                MainForm.EditChanges(uxtimePicker.Value, true);
+                if(_alarmStatus) MainForm.EditChanges(uxtimePicker.Value, true);
+                else MainForm.EditChanges(uxtimePicker.Value, false);
             }
             else if (!MainForm.BeingEdited)
             {
                 if (_alarmStatus)
                 {
-                    Alarm alarm = new Alarm();
-                    MainForm.CurrentAlarm.Time = uxtimePicker.Value;
-                    MainForm.CurrentAlarm.Checked = true;
-                    MainForm.CurrentAlarm.Index = MainForm.Count;
-                    MainForm.AddListItem(MainForm.CurrentAlarm.ToString());
-
+                    MainForm.AddListItem(uxtimePicker.Value, true, MainForm.Count);
                 }
                 else if (!_alarmStatus)
                 {
-                    Alarm alarm = new Alarm();
-                    MainForm.CurrentAlarm.Time = uxtimePicker.Value;
-                    MainForm.CurrentAlarm.Checked = false;
-                    MainForm.CurrentAlarm.Index = MainForm.Count;
-                    MainForm.AddListItem(MainForm.CurrentAlarm.ToString());
+                    MainForm.AddListItem(uxtimePicker.Value, false, MainForm.Count);
                 }
             }
+            MainForm.AddToTextFile();
             MainForm.Count++;
             MainForm.AddButtonDisabled();
             this.Hide();
