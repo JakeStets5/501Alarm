@@ -12,15 +12,22 @@ namespace _501_Alarm
 {
     public partial class AddEditAlarm : Form
     {
-        private Form1 MainForm;
+        private _501Alarm MainForm;
 
         private bool _alarmStatus;
 
-        public AddEditAlarm(Form1 form1, bool checkEnabled, DateTime dateTime)
+        private SetClickHelper setClickHelper;
+
+        private SetSounds setSounds;
+
+        public DateTime Time;
+
+        public bool Checked;
+
+        public AddEditAlarm(bool checkEnabled, DateTime dateTime)
         {
             InitializeComponent();
-            uxtimePicker.Format = DateTimePickerFormat.Time;
-            MainForm = form1;   
+            uxtimePicker.Format = DateTimePickerFormat.Time;   
             uxonCheckBox.Checked = checkEnabled;
             uxtimePicker.Value = dateTime;
         }
@@ -30,8 +37,18 @@ namespace _501_Alarm
         /// </summary>
         public AddEditAlarm(Form callingForm)
         {
-            MainForm = callingForm as Form1;
+            MainForm = callingForm as _501Alarm;
             InitializeComponent();
+        }
+
+        public void ChangeCheckbox(bool check)
+        {
+            uxonCheckBox.Checked = check;
+        }
+
+        public void ChangeDateTime(DateTime time)
+        {
+            uxtimePicker.Value = time;
         }
 
         private void uxcancelButton_Click(object sender, EventArgs e)
@@ -39,30 +56,18 @@ namespace _501_Alarm
             this.Hide();
         }
 
+        public void SetEditController(SetClickHelper sch, SetSounds ss, _501Alarm a)
+        {
+            setClickHelper = sch;
+            setSounds = ss;
+            MainForm = a;
+        }
+
         private void uxsetButton_Click(object sender, EventArgs e)
         {
             uxtimePicker.Format = DateTimePickerFormat.Time;
             uxtimePicker.CustomFormat = "hh:mm tt";
-            if (MainForm.BeingEdited)
-            {
-                if(_alarmStatus) MainForm.EditChanges(uxtimePicker.Value, true);
-                else MainForm.EditChanges(uxtimePicker.Value, false);
-            }
-            else if (!MainForm.BeingEdited)
-            {
-                if (_alarmStatus)
-                {
-                    MainForm.AddListItem(uxtimePicker.Value, true, MainForm.Count);
-                }
-                else if (!_alarmStatus)
-                {
-                    MainForm.AddListItem(uxtimePicker.Value, false, MainForm.Count);
-                }
-            }
-            MainForm.AddToTextFile();
-            MainForm.Count++;
-            MainForm.AddButtonDisabled();
-            this.Hide();
+            setClickHelper(uxtimePicker.Value, _alarmStatus, this, MainForm.AlarmList);
         }
 
         private void uxonCheckBox_CheckedChanged(object sender, EventArgs e)
@@ -76,6 +81,31 @@ namespace _501_Alarm
             {
                 _alarmStatus = false;
             }
+        }
+
+        private void radarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            setSounds(Sound.Radar);
+        }
+
+        private void chimesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            setSounds(Sound.Chimes);
+        }
+
+        private void beaconToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            setSounds(Sound.Beacon);
+        }
+
+        private void circuitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            setSounds(Sound.Circuit);
+        }
+
+        private void reflectionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            setSounds(Sound.Reflection);
         }
     }
 }

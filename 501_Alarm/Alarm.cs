@@ -14,15 +14,21 @@ namespace _501_Alarm
 
         public int Index { get; set; }
 
+        public bool Stopped { get; set; } = false;
+
+        public bool Snoozed { get; set; } = false;  
+
+        public string Sounds { get; set; }
+
         public override string ToString()
         {
             if (Checked)
             {
-                return Time.ToString("hh:mm tt") + ", ON";
+                return Time.ToString("hh:mm tt") + ", ON" + ", Sound: " + Sounds;
             }
             else
             {
-                return Time.ToString("hh:mm tt") + ", OFF";
+                return Time.ToString("hh:mm tt") + ", OFF" + ", Sound: " + Sounds;
             }
         }
     }

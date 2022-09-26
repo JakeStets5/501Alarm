@@ -22,3 +22,16 @@ C:\Users\JakeS\OneDrive\Desktop\501_Alarm\501_Alarm\obj\Debug\501_Alarm.csproj.C
 C:\Users\JakeS\OneDrive\Desktop\501_Alarm\501_Alarm\obj\Debug\501_Alarm.exe
 C:\Users\JakeS\OneDrive\Desktop\501_Alarm\501_Alarm\obj\Debug\501_Alarm.pdb
 C:\Users\JakeS\OneDrive\Desktop\501_Alarm\501_Alarm\bin\Debug\TextFile1.txt
+C:\Users\JakeS\Source\Repos\501Alarm\501_Alarm\bin\Debug\501_Alarm.exe.config
+C:\Users\JakeS\Source\Repos\501Alarm\501_Alarm\bin\Debug\501_Alarm.exe
+C:\Users\JakeS\Source\Repos\501Alarm\501_Alarm\bin\Debug\501_Alarm.pdb
+C:\Users\JakeS\Source\Repos\501Alarm\501_Alarm\obj\Debug\501_Alarm.csproj.AssemblyReference.cache
+C:\Users\JakeS\Source\Repos\501Alarm\501_Alarm\obj\Debug\501_Alarm.csproj.SuggestedBindingRedirects.cache
+C:\Users\JakeS\Source\Repos\501Alarm\501_Alarm\obj\Debug\_501_Alarm.AddEditAlarm.resources
+C:\Users\JakeS\Source\Repos\501Alarm\501_Alarm\obj\Debug\_501_Alarm.Properties.Resources.resources
+C:\Users\JakeS\Source\Repos\501Alarm\501_Alarm\obj\Debug\501_Alarm.csproj.GenerateResource.cache
+C:\Users\JakeS\Source\Repos\501Alarm\501_Alarm\obj\Debug\501_Alarm.csproj.CoreCompileInputs.cache
+C:\Users\JakeS\Source\Repos\501Alarm\501_Alarm\obj\Debug\501_Alarm.exe
+C:\Users\JakeS\Source\Repos\501Alarm\501_Alarm\obj\Debug\501_Alarm.pdb
+C:\Users\JakeS\Source\Repos\501Alarm\501_Alarm\obj\Debug\_501_Alarm._501Alarm.resources
+C:\Users\JakeS\Source\Repos\501Alarm\501_Alarm\bin\Debug\Alarms.txt
